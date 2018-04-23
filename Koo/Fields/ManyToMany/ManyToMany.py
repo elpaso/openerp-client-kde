@@ -207,6 +207,12 @@ class ManyToManyFieldWidget(AbstractFieldWidget, ManyToManyFieldWidgetUi):
         self.screen.storeViewSettings()
         return AbstractFieldWidget.saveState(self)
 
+    def inherits(self, str):
+        if str == "AbstractFieldWidget":
+            return True
+        else:
+            return False
+
 
 class ManyToManyFieldDelegate(AbstractFieldDelegate):
     def setModelData(self, editor, kooModel, index):

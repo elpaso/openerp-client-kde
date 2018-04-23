@@ -107,3 +107,9 @@ class TextBoxFieldWidget(AbstractFieldWidget):
         self.uiText.verticalScrollBar().setValue(vScroll)
         self.uiText.horizontalScrollBar().setValue(hScroll)
         self._highlighter.setDocument(self.uiText.document())
+
+    def inherits(self, str):
+        if str == "AbstractFieldWidget":
+            return True
+        else:
+            return False

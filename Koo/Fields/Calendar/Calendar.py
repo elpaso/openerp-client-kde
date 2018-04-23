@@ -121,6 +121,12 @@ class DateFieldWidget(AbstractFieldWidget, DateFieldWidgetUi):
         self.uiDate.setText(text)
         self.uiDate.setToolTip(text)
 
+    def inherits(self, str):
+        if str == "AbstractFieldWidget":
+            return True
+        else:
+            return False
+
 
 class DateTimeFieldWidget(DateFieldWidget):
     def __init__(self, parent, model, attrs={}):

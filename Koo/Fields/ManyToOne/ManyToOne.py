@@ -333,6 +333,12 @@ class ManyToOneFieldWidget(AbstractFieldWidget, ManyToOneFieldWidgetUi):
             'report_type': 'pdf'
         }, Rpc.session.context)
 
+    def inherits(self, str):
+        if str == "AbstractFieldWidget":
+            return True
+        else:
+            return False
+
 
 class ManyToOneFieldDelegate(AbstractFieldDelegate):
     def __init__(self, parent, attributes):

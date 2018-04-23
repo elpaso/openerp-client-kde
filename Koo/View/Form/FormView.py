@@ -170,6 +170,12 @@ class FormContainer(QWidget):
         self.row = self.row + 1
         self.column = 0
 
+    def inherits(self, str):
+        if str == "QWidget":
+            return True
+        else:
+            return False
+
 # @brief The FormView class is an AbstractView capable of showing one in an read-write form.
 
 

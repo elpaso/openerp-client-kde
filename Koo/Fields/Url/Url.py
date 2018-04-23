@@ -81,6 +81,12 @@ class UrlFieldWidget(AbstractFieldWidget, UrlFieldWidgetUi):
         if value != '':
             Api.instance.createWebWindow(value, value)
 
+    def inherits(self, str):
+        if str == "AbstractFieldWidget":
+            return True
+        else:
+            return False
+
 
 class EMailFieldWidget(UrlFieldWidget):
     def openUrl(self):

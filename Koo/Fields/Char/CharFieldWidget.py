@@ -111,3 +111,9 @@ class CharFieldWidget(AbstractFieldWidget):
 
     def colorWidget(self):
         return self.widget
+
+    def inherits(self, str):
+        if str == "AbstractFieldWidget":
+            return True
+        else:
+            return False
